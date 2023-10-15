@@ -8,7 +8,7 @@
     "type": "",
     "link": "nullnull"
   },
-  "topics": null,
+  "topics": [],
   "skippable": "",
   "views": "0",
   "max_views": "240",
@@ -22,7 +22,7 @@
     "point_value": "1"
   },
   "answer_required": {
-    "from": 0,
+    "from": 1,
     "to": 1
   },
   "special_post": "0",
@@ -36,7 +36,7 @@
   "post_type": "41",
   "is_reverable": 0,
   "can_receive_coins": 1,
-  "can_receive_coins_max": 400,
+  "can_receive_coins_max": 1000,
   "score": 0,
   "is_anon": "0",
   "allow_extra_answer": 0,
@@ -45,13 +45,13 @@
   "id": "1177214",
   "isAnonymous": "0",
   "sorting": 1696993453,
-  "updated": "2023-10-14T12:41:05Z",
-  "created": "2023-10-11T03:04:13Z",
-  "forwarded": "0001-01-01T00:00:00Z",
+  "updated": "2023-10-14 12:41:05",
+  "created": "2023-10-11 03:04:13",
+  "forwarded": "2023-10-11 03:04:13",
   "creator": {
-    "id": "𲑇",
+    "id": "205895",
     "staticLink": "j83f60eb39940a13a",
-    "image": "https://dz1nh2xcd55w6.cloudfront.net/16d2ecfa31d88c87d88d8ace26208401.jpg",
+    "image": "https:\/\/dz1nh2xcd55w6.cloudfront.net\/16d2ecfa31d88c87d88d8ace26208401.jpg",
     "backgroundImage": "",
     "name": "Endra Irawan",
     "color": "536",
@@ -59,20 +59,141 @@
     "isFollowed": 0,
     "whichappid": "endrairawan",
     "device_id": "droid|a2c82f1b48b276ca",
-    "user_score": "248",
-    "last_active": "0001-01-01T00:00:00Z",
+    "user_score": "247",
+    "last_active": "2023-10-14 04:49:20",
     "isFollowed_debug": 0,
     "public_info": {
-      "prestige": 123,
-      "badge": "https://p.staticcloud.click/WEBAVA1695208454650ad40623bca.jpg"
+      "prestige": 385,
+      "badge": ""
     }
   },
-  "forwarder": "2023-10-11T03:04:13Z",
-  "containers": null,
+  "forwarder": null,
+  "containers": [
+    {
+      "id": "2632495",
+      "type": "41",
+      "resource": "https:\/\/p.staticcloud.click\/62589bce615bc42d21a08f5d1b3c4599.jpg",
+      "requested": "0",
+      "data": "",
+      "description": "",
+      "votes": 97,
+      "container_creator_id": "205895",
+      "content_offset": null,
+      "video_link": null,
+      "aspect_ratio": "358.0,638.0",
+      "is_right": 0,
+      "is_muted": 0,
+      "link": null,
+      "container_creator": {
+        "id": "205895",
+        "staticLink": "j83f60eb39940a13a",
+        "image": "https:\/\/dz1nh2xcd55w6.cloudfront.net\/16d2ecfa31d88c87d88d8ace26208401.jpg",
+        "name": "Endra Irawan",
+        "color": "536",
+        "whichappid": "endrairawan",
+        "last_active": "2023-10-14 04:49:20",
+        "isFollowed_debug": 0,
+        "public_info": {
+          "prestige": 385,
+          "badge": ""
+        }
+      }
+    },
+    {
+      "id": "2632492",
+      "type": "41",
+      "resource": "https:\/\/p.staticcloud.click\/a1cef362a426492c5d3f5a676e4c33bd.jpg",
+      "requested": "0",
+      "data": "",
+      "description": "",
+      "votes": 94,
+      "container_creator_id": "205895",
+      "content_offset": null,
+      "video_link": null,
+      "aspect_ratio": "358.0,638.0",
+      "is_right": 0,
+      "is_muted": 0,
+      "link": null,
+      "container_creator": {
+        "id": "205895",
+        "staticLink": "j83f60eb39940a13a",
+        "image": "https:\/\/dz1nh2xcd55w6.cloudfront.net\/16d2ecfa31d88c87d88d8ace26208401.jpg",
+        "name": "Endra Irawan",
+        "color": "536",
+        "whichappid": "endrairawan",
+        "last_active": "2023-10-14 04:49:20",
+        "isFollowed_debug": 0,
+        "public_info": {
+          "prestige": 385,
+          "badge": ""
+        }
+      }
+    },
+    {
+      "id": "2632493",
+      "type": "41",
+      "resource": "https:\/\/p.staticcloud.click\/9d853a923f04f096f4cd078bf4e3a7f9.jpg",
+      "requested": "0",
+      "data": "",
+      "description": "",
+      "votes": 80,
+      "container_creator_id": "205895",
+      "content_offset": null,
+      "video_link": null,
+      "aspect_ratio": "358.0,638.0",
+      "is_right": 0,
+      "is_muted": 0,
+      "link": null,
+      "container_creator": {
+        "id": "205895",
+        "staticLink": "j83f60eb39940a13a",
+        "image": "https:\/\/dz1nh2xcd55w6.cloudfront.net\/16d2ecfa31d88c87d88d8ace26208401.jpg",
+        "name": "Endra Irawan",
+        "color": "536",
+        "whichappid": "endrairawan",
+        "last_active": "2023-10-14 04:49:20",
+        "isFollowed_debug": 0,
+        "public_info": {
+          "prestige": 385,
+          "badge": ""
+        }
+      }
+    },
+    {
+      "id": "2632494",
+      "type": "41",
+      "resource": "https:\/\/p.staticcloud.click\/02c523bdba5314b5f0e3e5046b4d9513.jpg",
+      "requested": "0",
+      "data": "",
+      "description": "",
+      "votes": 99,
+      "container_creator_id": "205895",
+      "content_offset": null,
+      "video_link": null,
+      "aspect_ratio": "358.0,638.0",
+      "is_right": 0,
+      "is_muted": 0,
+      "link": null,
+      "container_creator": {
+        "id": "205895",
+        "staticLink": "j83f60eb39940a13a",
+        "image": "https:\/\/dz1nh2xcd55w6.cloudfront.net\/16d2ecfa31d88c87d88d8ace26208401.jpg",
+        "name": "Endra Irawan",
+        "color": "536",
+        "whichappid": "endrairawan",
+        "last_active": "2023-10-14 04:49:20",
+        "isFollowed_debug": 0,
+        "public_info": {
+          "prestige": 385,
+          "badge": ""
+        }
+      }
+    }
+  ],
   "staticLink": "o907652610ad6a5df",
   "priority": "1696993453",
   "goal": "200",
-  "isOwner": "200",
+  "isOwner": "0",
   "description": "",
   "isAnonymus": "0",
   "isPrivate": "0",
@@ -92,15 +213,15 @@
   "title_on_image": "",
   "lastVoter": null,
   "last_comment": {
-    "updated": "2023-10-11T08:12:48Z",
-    "content": "ðŸ”¥ðŸ’¯",
-    "whiches_id": 1177214,
-    "name": "ðŸ–¤VðŸ’šIðŸ’™KðŸ’›AðŸ§¡SðŸ¤ŽHðŸ”¥ðŸ‡®ðŸ‡³",
-    "profile_image": "https://p.staticcloud.click/9dd86b3684130e9af23128186c6bb4d1.jpg",
-    "color": "442",
-    "whichappid": "thevvvvvv",
-    "static_Link": "a91764eac9f0da5f3",
-    "geo_code": "IN"
+    "updated": "2023-10-11 03:12:45",
+    "content": "Beauty ♥️♥️♥️",
+    "whiches_id": "1177214",
+    "name": "Dodi Faujan",
+    "profile_image": "https:\/\/p.staticcloud.click\/f1b8713bcac4fe6388e6deae0fe6e0f2.jpg",
+    "color": "255",
+    "whichappid": "dodifaujan",
+    "static_Link": "jec64a7037e7f564",
+    "geo_code": "ID"
   },
   "can_grade": 0,
   "featured": "0",
@@ -122,9 +243,9 @@
     "reported": 0,
     "watched": 0
   },
-  "skip": "",
-  "upvote": "",
-  "watched": "",
+  "skip": "68",
+  "upvote": "21",
+  "watched": "1",
   "points": 0,
   "bonus_notice": "-",
   "bonus_notice_reason": "-",

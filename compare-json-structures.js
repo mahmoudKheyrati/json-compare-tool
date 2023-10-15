@@ -50,7 +50,8 @@ function compareJsonStructure(j1, j2, rules) {
 
     console.log("\t compare structure: ")
     let typeIssues = []
-    let typeCheckedKeys = []
+    let typeCheckedKeys = {}
+    let valueCheckedKeys = {}
     let valueIssues = []
 
     for (const e in f1) {
@@ -68,7 +69,8 @@ function compareJsonStructure(j1, j2, rules) {
             }
             if (valueCheck) {
                 if (e1 !== e2) {
-                    valueIssues.push("\t\t" + `value issue(${e}): ` + +chalk.green("(1): " +  e1) + chalk.blue(" (2): "+ e2))
+                    valueIssues.push("\t\t" + `value issue(${e}): `  +chalk.green("(1): ") + e1+ chalk.blue(" (2): " + e2))
+                    valueCheckedKeys[e] = true
                 }
             }
 
@@ -90,8 +92,8 @@ function compareJsonStructure(j1, j2, rules) {
             }
 
             if (valueCheck) {
-                if (e1 !== e2) {
-                    valueIssues.push("\t\t" + `value issue(${e}): `  +chalk.green("(1): ") +  e1 + chalk.blue(" (2): ") + e2)
+                if (e1 !== e2 && valueCheckedKeys[e] === undefined) {
+                    valueIssues.push("\t\t" + `value issue(${e}): ` + chalk.green("(1): ") + e1 + chalk.blue(" (2): ") + e2)
                 }
             }
 
