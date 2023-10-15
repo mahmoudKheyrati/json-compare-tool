@@ -2,7 +2,8 @@ json_directories_pattern: "jsons/*"
 json_files_pattern: "*.json"
 rules:
   jsons/streams_0:
+    value_check: 'true'
     length:
-      hobbies: 'gt 5' # can gt gte lt lte eq between
+#      hobbies: 'gt 5' # can gt gte lt lte eq between
 
 

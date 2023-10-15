@@ -23,9 +23,9 @@ function main() {
         const j1 = readJsonFile(files[0])
         const j2 = readJsonFile(files[1])
 
-        console.log(dir, )
+        console.log(dir,)
         console.log(`compare files in ${dir}:`)
-        compareJsons(j1, j2, rules )
+        compareJsons(j1, j2, rules)
         console.log("----------------------------------")
     }
 
@@ -33,30 +33,43 @@ function main() {
 }
 
 function compareJsons(j1, j2, rules) {
-    compareJsonStructure(j1, j2)
+    compareJsonStructure(j1, j2, rules)
     checkRules(chalk.green("(1)"), j1, rules)
     checkRules(chalk.blue('(2)'), j2, rules)
 
 
 }
 
-function compareJsonStructure(j1, j2) {
+function compareJsonStructure(j1, j2, rules) {
     const f1 = flattenJson(j1);
     const f2 = flattenJson(j2);
+    let valueCheck = false
+    if (rules["value_check"] !== undefined && rules["value_check"] === 'true') {
+        valueCheck = true
+    }
+
     console.log("\t compare structure: ")
     let typeIssues = []
     let typeCheckedKeys = []
+    let valueIssues = []
 
     for (const e in f1) {
         if (!f2.hasOwnProperty(e)) {
             console.log("\t\t" + chalk.green('(1)') + ` has ${e} but ` + chalk.blue('(2)') + ` HAVEN'T`)
 
         } else {
-            const t1 = typeof (f1[e])
-            const t2 = typeof (f2[e])
+            const e1 = f1[e];
+            const e2 = f2[e];
+            const t1 = typeof e1
+            const t2 = typeof e2
             if (t1 !== t2) {
                 typeIssues.push("\t\t" + chalk.red("type: ") + `${e} have type=${t1} in ` + chalk.green('(1)') + ` but it has type=${t2} in ` + chalk.blue('(2)'))
                 typeCheckedKeys[e] = true
+            }
+            if (valueCheck) {
+                if (e1 !== e2) {
+                    valueIssues.push("\t\t" + `value issue(${e}): ` + +chalk.green("(1): " +  e1) + chalk.blue(" (2): "+ e2))
+                }
             }
 
         }
@@ -66,17 +79,29 @@ function compareJsonStructure(j1, j2) {
         if (!f1.hasOwnProperty(e)) {
             console.log("\t\t" + chalk.blue('(2)') + ` has ${e} but ` + chalk.green('(1)') + ` HAVEN'T`)
 
-        }else {
-            const t1 = typeof (f1[e])
-            const t2 = typeof (f2[e])
+        } else {
+            const e1 = f1[e];
+            const e2 = f2[e];
+            const t1 = typeof e1
+            const t2 = typeof e2
+
             if (t1 !== t2 && typeCheckedKeys[e] === undefined) {
                 typeIssues.push("\t\t" + chalk.red("type: ") + `${e} have type=${t1} in ` + chalk.green('(1)') + ` but it has type=${t2} in ` + chalk.blue('(2)'))
+            }
+
+            if (valueCheck) {
+                if (e1 !== e2) {
+                    valueIssues.push("\t\t" + `value issue(${e}): `  +chalk.green("(1): ") +  e1 + chalk.blue(" (2): ") + e2)
+                }
             }
 
         }
     }
     for (const typeIssue of typeIssues) {
         console.log(typeIssue)
+    }
+    for (const valueIssue of valueIssues) {
+        console.log(valueIssue)
     }
 
 }
@@ -89,9 +114,10 @@ function checkRules(name, j, rules) {
     checkLengthRule(j, lengthRule)
 
 }
-function checkLengthRule(j , rule) {
+
+function checkLengthRule(j, rule) {
     console.log("\t\t check length:")
-    if (rule === undefined){
+    if (rule === undefined) {
         return
     }
 
@@ -100,9 +126,9 @@ function checkLengthRule(j , rule) {
         let op1
         let op2
 
-        switch (instruction[0]){
+        switch (instruction[0]) {
             case "eq":
-                if (instruction.length !== 2){
+                if (instruction.length !== 2) {
                     throw new Error(`${instruction[0]} should have 2 operands`)
                 }
                 op1 = Number(instruction[1])
@@ -111,7 +137,7 @@ function checkLengthRule(j , rule) {
                 }
                 break
             case "gt":
-                if (instruction.length !== 2){
+                if (instruction.length !== 2) {
                     throw new Error(`${instruction[0]} should have 2 operands`)
                 }
                 op1 = Number(instruction[1])
@@ -120,7 +146,7 @@ function checkLengthRule(j , rule) {
                 }
                 break
             case "gte":
-                if (instruction.length !== 2){
+                if (instruction.length !== 2) {
                     throw new Error(`${instruction[0]} should have 2 operands`)
                 }
                 op1 = Number(instruction[1])
@@ -129,7 +155,7 @@ function checkLengthRule(j , rule) {
                 }
                 break
             case "lt":
-                if (instruction.length !== 2){
+                if (instruction.length !== 2) {
                     throw new Error(`${instruction[0]} should have 2 operands`)
                 }
                 op1 = Number(instruction[1])
@@ -138,7 +164,7 @@ function checkLengthRule(j , rule) {
                 }
                 break
             case "lte":
-                if (instruction.length !== 2){
+                if (instruction.length !== 2) {
                     throw new Error(`${instruction[0]} should have 2 operands`)
                 }
                 op1 = Number(instruction[1])
@@ -147,7 +173,7 @@ function checkLengthRule(j , rule) {
                 }
                 break
             case "between":
-                if (instruction.length !== 2){
+                if (instruction.length !== 2) {
                     throw new Error(`${instruction[0]} should have 3 operands`)
                 }
                 op1 = Number(instruction[1])
