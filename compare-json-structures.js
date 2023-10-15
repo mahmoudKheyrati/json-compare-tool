@@ -69,7 +69,7 @@ function compareJsonStructure(j1, j2, rules) {
             }
             if (valueCheck) {
                 if (e1 !== e2) {
-                    valueIssues.push("\t\t" + `value issue(${e}): `  +chalk.green("(1): ") + e1+ chalk.blue(" (2): " + e2))
+                    valueIssues.push("\t\t" + `value issue(${e}): `  +chalk.green("(1): ") + e1+ chalk.blue(" (2): ") + e2)
                     valueCheckedKeys[e] = true
                 }
             }
